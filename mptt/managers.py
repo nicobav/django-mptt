@@ -168,7 +168,7 @@ class TreeManager(models.Manager.from_queryset(TreeQuerySet)):
             *[f.lstrip('-') for f in opts.order_insertion_by]
         )
 
-        if not q:
+        if q == None:
             return self.none()
 
         for group in groupby(
